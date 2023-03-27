@@ -1,0 +1,12 @@
+CASE
+WHEN REGEXP_CONTAINS (Tracking Code , 'fb') or REGEXP_CONTAINS (Tracking Code ,'FB') or REGEXP_CONTAINS (Tracking Code , 'Facebook') THEN "Facebook"
+WHEN REGEXP_CONTAINS (Tracking Code ,'ig') or REGEXP_CONTAINS (Tracking Code , 'IG') or REGEXP_CONTAINS (Tracking Code , 'Instagram') THEN "Instagram"
+WHEN REGEXP_CONTAINS (Tracking Code , 'Influencer') or REGEXP_CONTAINS (Tracking Code , 'influencer')  THEN "Influencers"
+WHEN REGEXP_CONTAINS (Tracking Code , 'Landing') or REGEXP_CONTAINS (Tracking Code ,'Movies')  or REGEXP_CONTAINS (Tracking Code ,'peliculas') or REGEXP_CONTAINS (Tracking Code ,'Homepage') THEN "Organic"
+WHEN REGEXP_CONTAINS (Tracking Code , 'Search') or REGEXP_CONTAINS (Tracking Code ,'search')  THEN "Search/GoogleAds"
+WHEN REGEXP_CONTAINS (Tracking Code , '404') THEN "404"
+WHEN REGEXP_CONTAINS (Tracking Code , 'DV360') or REGEXP_CONTAINS (Tracking Code ,'Dv360')  or REGEXP_CONTAINS (Tracking Code ,'dv360') THEN "DV360"
+WHEN REGEXP_CONTAINS (Tracking Code ,'TW') or REGEXP_CONTAINS (Tracking Code , 'Tw') or REGEXP_CONTAINS (Tracking Code ,'Twitter') THEN "Twitter"
+WHEN REGEXP_CONTAINS (Tracking Code ,'YT') or REGEXP_CONTAINS (Tracking Code , 'Yt') or REGEXP_CONTAINS (Tracking Code ,'Youtube') THEN "Youtube"
+ELSE "Organic"
+END
